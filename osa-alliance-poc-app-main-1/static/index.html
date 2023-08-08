@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evinta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f5f9; /* Updated background color */
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    #logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #26445e; /* Updated brand color */
+    }
+
+    #documentInput {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      border: 2px dashed #ccc;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    #results {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img id="logo" src="data:image/png;base64,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" alt="Logo">
+    <h1>Form Recognizer Web App</h1>
+    <input type="file" accept=".pdf,.png,.jpg" id="documentInput">
+    
+    <div>
+      <h2>Extracted Results</h2>
+      <pre id="results"></pre>
+    </div>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
