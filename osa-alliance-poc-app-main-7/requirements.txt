@@ -1,0 +1,5 @@
+Flask==2.0.1
+gunicorn==20.1.0
+google-cloud-firestore==2.3.2
+azure-ai-formrecognizer==3.3.0
+
