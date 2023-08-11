@@ -3,6 +3,9 @@ from google.cloud import firestore
 from google.oauth2 import service_account
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
+from django.urls import path
+import os
+
 
 app = Flask(__name__)
 
@@ -66,4 +69,4 @@ def save_to_firestore():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=8080)
