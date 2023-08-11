@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 # Load your Google Cloud service account key JSON file
 # Replace 'path/to/your/credentials.json' with the actual path to your credentials file
-credentials = service_account.Credentials.from_service_account_file('/home/osanda/Downloads/devops-osanda-02a3c26475e3.json')
-db = firestore.Client(credentials=credentials)
+#credentials = service_account.Credentials.from_service_account_file('/home/osanda/Downloads/devops-osanda-02a3c26475e3.json')
+#db = firestore.Client(credentials=credentials)
 
 # Azure Document Extractor configuration
 endpoint = "https://test-ncinga-osanda-1.cognitiveservices.azure.com/"
